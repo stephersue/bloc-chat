@@ -3,12 +3,19 @@
     var Room = {};
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    console.log(rooms, 'This is rooms in Room.js')
 
     Room.all = rooms;
 
-    return Room;
-    console.log(Room, 'This is Room object in Room.js')
+    Room.add = function(room) {
+        //Use the firebase method $add here
+    }
+
+    return {
+      Room;
+      add: function(newRoom) {
+         rooms.$add(newRoom);
+       }
+     }
   }
 
   angular
