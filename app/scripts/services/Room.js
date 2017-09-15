@@ -6,16 +6,11 @@
 
     Room.all = rooms;
 
-    Room.add = function(room) {
-        //Use the firebase method $add here
+    Room.add = function(newRoom) {
+      rooms.$add(newRoom);
     }
 
-    return {
-      Room;
-      add: function(newRoom) {
-         rooms.$add(newRoom);
-       }
-     }
+    return Room;
   }
 
   angular

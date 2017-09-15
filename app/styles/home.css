@@ -8,7 +8,7 @@
    background-color: #dedede;
    padding: 35px;
    margin-right: 35px;
-    min-height: 100%;
+   min-height: 100%;
   }
 
  h1.sidebar-title {
@@ -23,7 +23,7 @@
  h3.sidebar-room {
    font-size: 1.15em;
    color: #979797;
-   margin: 0 0 0.85em 0;
+   margin: 0 0 0.85em 0.45em;
  }
 
  .sidebar-btn-add {
