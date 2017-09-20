@@ -2,11 +2,11 @@
    height: 100%;
  }
 
- .sidebar {
+ #sidebar {
    float: left;
    width: 25%;
    background-color: #dedede;
-   padding: 35px;
+   padding: 10px;
    margin-right: 35px;
    min-height: 100%;
   }
@@ -35,6 +35,7 @@
    margin-top: 1.5em;
  }
 
- .chat-room {
-    padding: 35px;
+ #chat-room {
+    padding: 10px 35px 10px 35px;
+    height: 100%;
   }
