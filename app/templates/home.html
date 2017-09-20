@@ -11,9 +11,19 @@
     </div>
   </section>
   <section id="chat-room">
-      <h1>{{ home.activeRoom.$value }}</h1>
-  </section>
-  <section>
-    html form to create messages
+    <p ng-show="home.activeRoom === null">Welcome to Bloc Chat! Select a room to join the conversation.</p>
+    <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
+    <div class="message" ng-repeat="message in home.messages">
+        <p><span class="message-username">{{ message.username }}</span><span class="message-time">{{ message.sentAt }}</span></p>
+        <p class="message-content">{{ message.content }}</p>
+    </div>
+    <div id="new-message">
+       <form ng-submit="home.sendMessage(home.newMessage, home.activeRoom)">
+         <div class="input-group">
+           <input type="text" class="form-control" ng-model="home.newMessage" title="message" autofocus>
+           <span class="input-group-btn"><button class="btn btn-default modal-btn-create" type="button" ng-click="home.sendMessage()">Send</button></span>
+         </div>
+       </form>
+     </div>
   </section>
 </main>
